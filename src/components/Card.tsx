@@ -1,4 +1,6 @@
 import React from 'react';
+import './GameBoard.css';
+
 
 interface CardProps {
   id: number;

@@ -7,7 +7,7 @@ export function Celebration() {
     const timer = setTimeout(() => {
       const elements = document.querySelectorAll('.pyro');
       elements.forEach(el => el.remove());
-    }, 5000);
+    }, 50000);
 
     return () => clearTimeout(timer);
   }, []);
