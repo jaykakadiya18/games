@@ -3,10 +3,11 @@ import { Card } from './Card';
 import { GameStats } from './GameStats';
 import { WinMessage } from './WinMessage';
 import { GameOver } from './GameOver';
-import { createDeck, checkForMatch, checkForWin } from '../utils/gameLogic';
-import { createAudioInstance } from '../utils/audio';
-import { AUDIO_PATHS } from '../constants/audio';
-import type { GameState } from '../types/game';
+import { createDeck, checkForMatch, checkForWin } from '../../utils/gameLogic';
+import { createAudioInstance } from '../../utils/audio';
+import { AUDIO_PATHS } from '../../constants/audio';
+import type { GameState } from '../../types/game';
+// import { AdMobBanner } from 'react-google-ads';
 
 const GAME_DURATION = 60; // 1 minute in seconds
 
@@ -147,7 +148,14 @@ export function GameBoard() {
 
       {gameState.isWon && <WinMessage moves={gameState.moves} />}
       {gameState.isGameOver && !gameState.isWon && <GameOver />}
+
+      {/* <AdMobBanner
+      adUnit="ca-app-pub-3709659591925986/5851021690"
+      format="banner"
+      style={{ display: 'inline-block', width: '320px', height: '50px' }}
+    /> */}
     </div>
+   
   );
 }
 
