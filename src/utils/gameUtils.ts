@@ -2,9 +2,9 @@ import type { Position } from '../types/game';
 
 export const GRID_SIZE = 20;
 export const CELL_SIZE = 20;
-export const INITIAL_SPEED = 150;
-export const MIN_SPEED = 50; // Maximum speed (minimum delay)
-export const SPEED_INCREMENT = 2; // How much to decrease delay per snake segment
+export const INITIAL_SPEED = 130;
+export const MIN_SPEED = 45; // Maximum speed (minimum delay)
+export const SPEED_INCREMENT = 1.5; // How much to decrease delay per snake segment
 
 export function calculateSpeed(snakeLength: number): number {
   const newSpeed = INITIAL_SPEED - (snakeLength - 1) * SPEED_INCREMENT;

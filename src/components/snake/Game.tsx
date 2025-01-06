@@ -13,7 +13,8 @@ import {
 } from '../../utils/gameUtils';
 import type { Position, Direction } from '../../types/game';
 
-export default function Game() {
+
+export function Game() {
   const [snake, setSnake] = useState<Position[]>([{ x: 10, y: 10 }]);
   const [food, setFood] = useState<Position>(() => generateFood(GRID_SIZE));
   const [direction, setDirection] = useState<Direction>('RIGHT');
